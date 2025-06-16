@@ -2,7 +2,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/JDouss/boda-almudena-jaime/",
+  "homepage": "https://JDouss.github.io/boda-almudena-jaime/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
