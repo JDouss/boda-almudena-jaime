@@ -16,7 +16,7 @@ const Venue = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="animate-scale-in">
               <img 
-                src={iglesiaImage} // <-- 2. Use the imported image variable
+                src={TenadasImage} // <-- 2. Use the imported image variable
                 alt="Finca Las Tenadas"
                 className="rounded-lg shadow-2xl w-full h-96 object-cover"
               />
@@ -46,8 +46,7 @@ const Venue = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="animate-scale-in">
               <img 
-                // URL de imagen corregida para que funcione
-                src="https://images.unsplash.com/photo-1522026852934-28a4a35a7a11?q=80&w=1964&auto=format&fit=crop"
+                src={TenadasImage} // <-- 2. Use the imported image variable
                 alt="Finca Las Tenadas"
                 className="rounded-lg shadow-2xl w-full h-96 object-cover"
               />
