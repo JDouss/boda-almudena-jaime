@@ -1,8 +1,8 @@
-{
   "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://github.com/JDouss/boda-almudena-jaime/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
