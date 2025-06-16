@@ -16,7 +16,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto animate-fade-in">
         <h1 className="font-serif text-6xl md:text-8xl font-bold mb-6 tracking-wide">
-          Isabella <span className="text-cream-200">&</span> Miguel
+          Almudena <span className="text-cream-200">&</span> Jaime
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 font-light tracking-wider">
@@ -26,12 +26,12 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-lg">
           <div className="flex items-center gap-2">
             <Calendar className="w-5 h-5 text-cream-200" />
-            <span>September 15, 2024</span>
+            <span>18 de Octubre, 2025</span>
           </div>
           <div className="hidden md:block w-1 h-1 bg-cream-200 rounded-full"></div>
           <div className="flex items-center gap-2">
             <MapPin className="w-5 h-5 text-cream-200" />
-            <span>Seville, Spain</span>
+            <span>Madrid, España</span>
           </div>
         </div>
         
