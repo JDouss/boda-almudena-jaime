@@ -1,6 +1,6 @@
 import { MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import TenadasImage from '@/assets/LasTenadas.jpg';
+import TenadasImage from '@/assets/LasTenadas';
 
 const Venue = () => {
   return (
