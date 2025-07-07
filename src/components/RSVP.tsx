@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 
 const RSVP = () => {
@@ -93,42 +93,29 @@ const RSVP = () => {
               
               <div>
                 <Label className="text-sage-700 font-medium">¿Puedes asistir?</Label>
-                <RadioGroup
-                  value={formData.attendance}
-                  onValueChange={(value) => setFormData({...formData, attendance: value})}
-                  className="mt-2"
-                >
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="Sí, allí estaré" id="yes" />
-                    <Label htmlFor="yes">Sí, allí estaré</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="No puedo, lo siento" id="no" />
-                    <Label htmlFor="no">No puedo, lo siento</Label>
-                  </div>
-                </RadioGroup>
+                <Select value={formData.attendance} onValueChange={(value) => setFormData({...formData, attendance: value})}>
+                  <SelectTrigger className="border-sage-300 focus:border-terracotta-400">
+                    <SelectValue placeholder="Please select" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Sí, allí estaré">Sí, allí estaré</SelectItem>
+                    <SelectItem value="No puedo, lo siento">No puedo, lo siento</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
               
               <div>
                 <Label className="text-sage-700 font-medium">Restricciones alimenticias</Label>
-                <RadioGroup
-                  value={formData.dietary}
-                  onValueChange={(value) => setFormData({...formData, dietary: value})}
-                  className="mt-2"
-                >
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="Ninguna" id="none" />
-                    <Label htmlFor="none">Ninguna</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="Vegano" id="vegan" />
-                    <Label htmlFor="vegan">Vegano</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="Celiaco" id="celiac" />
-                    <Label htmlFor="celiac">Celiaco</Label>
-                  </div>
-                </RadioGroup>
+                <Select value={formData.dietary} onValueChange={(value) => setFormData({...formData, dietary: value})}>
+                  <SelectTrigger className="border-sage-300 focus:border-terracotta-400">
+                    <SelectValue placeholder="Please select" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Ninguna">Ninguna</SelectItem>
+                    <SelectItem value="Vegano">Vegano</SelectItem>
+                    <SelectItem value="Celiaco">Celiaco</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
               
               <Button 
