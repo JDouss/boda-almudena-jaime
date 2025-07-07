@@ -9,7 +9,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://github.com/JDouss/boda-almudena-jaime/blob/main/src/assets/AlmuyJaimeDanubio.jpeg')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://raw.githubusercontent.com/JDouss/boda-almudena-jaime/main/src/assets/AlmuyJaimeDanubio.jpeg')`
         }}
       />
       
