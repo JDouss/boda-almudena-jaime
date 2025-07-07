@@ -1,6 +1,7 @@
 
 import { Calendar, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import AlmuyJaimeDanubio from '@/assets/AlmuyJaimeDanubio.jpeg';
 
 const Hero = () => {
   return (
@@ -9,7 +10,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/AlmuyJaimeDanubio.jpeg')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${AlmuyJaimeDanubio})`
         }}
       />
       
