@@ -1,6 +1,6 @@
 import { MapPin, Clock, Bus } from 'lucide-react'; // Added Bus icon
-import TenadasImage from '@/assets/LasTenadas.png';
 import IglesiaICADEImage from '@/assets/IglesiaICADE.png';
+import fotoTenadas from '@/assets/fotoTenadas.jpeg';
 
 const Venue = () => {
   return (
@@ -42,7 +42,7 @@ const Venue = () => {
               <div className="flex items-start gap-3">
                 <Bus className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sage-600">Habrá autobuses disponibles para ir a la finca</p>
+                  <p className="text-sage-600">Habrá autobuses disponibles para ir a la finca al finalizar la ceremonia </p>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@ const Venue = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="animate-scale-in">
               <img 
-                src={TenadasImage}
+                src={fotoTenadas}
                 alt="Finca Las Tenadas"
                 className="rounded-lg shadow-2xl w-full h-96 object-cover"
               />
@@ -79,7 +79,7 @@ const Venue = () => {
               <div className="flex items-start gap-3">
                 <Bus className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sage-600">Los autobuses volverán a la zona de Bernabeu, concretaremos hora y sitio exacto a medida que se acerque ala fecha</p>
+                  <p className="text-sage-600">Los autobuses volverán a la zona de Bernabeu, concretaremos hora y sitio exacto a medida que se acerque la fecha</p>
                 </div>
               </div>
             </div>
