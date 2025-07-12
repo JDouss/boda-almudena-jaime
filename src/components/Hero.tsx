@@ -8,11 +8,12 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <img
-        src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2000&q=80"
-        alt="Scenic background"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: -1 }}
+        src={AlmuyJaimeDanubio} // Changed to use your imported image
+        alt="Almudena and Jaime" // More descriptive alt text for accessibility
+        className="absolute inset-0 w-full h-full object-cover object-position-center" // Added object-position-center
+        style={{ zIndex: -1 }} // Places image behind other content
       />
+      
       <div className="absolute inset-0 bg-black/30" />
       
       {/* Content */}
