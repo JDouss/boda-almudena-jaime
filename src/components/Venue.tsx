@@ -1,4 +1,4 @@
-import { MapPin } from 'lucide-react';
+import { MapPin, Clock } from 'lucide-react';
 // Removed Card and CardContent imports as they are no longer needed
 import TenadasImage from '@/assets/LasTenadas.png';
 import IglesiaICADEImage from '@/assets/IglesiaICADE.png';
@@ -31,7 +31,12 @@ const Venue = () => {
                   <p className="text-sage-600">28015 Madrid, España</p>
                 </div>
               </div>
-              <p className="text-sage-600 text-lg font-medium">Ceremonia: 12:30</p> {/* Added ceremony time */}
+              <div className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-sage-700 font-medium">Ceremonia</p>
+                  <p className="text-sage-600">12:30</p>
+                </div>
             </div>
           </div>
         </div>
