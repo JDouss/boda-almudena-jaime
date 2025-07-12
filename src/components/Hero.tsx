@@ -9,7 +9,7 @@ const Hero = () => {
       {/* Background Image */}
       <img
         src={AlmuyJaimeDanubio} // Changed to use your imported image
-        alt="Almudena and Jaime" // More descriptive alt text for accessibility
+        alt="Almudena y Jaime" // More descriptive alt text for accessibility
         className="absolute inset-0 w-full h-full object-cover object-position-center" // Added object-position-center
         style={{ zIndex: -1 }} // Places image behind other content
       />
@@ -19,11 +19,11 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto animate-fade-in">
         <h1 className="font-serif text-6xl md:text-8xl font-bold mb-6 tracking-wide">
-          Almudena <span className="text-cream-200">&</span> Jaime
+          Almudena <span className="text-cream-200">y</span> Jaime
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 font-light tracking-wider">
-          are getting married
+          se casan
         </p>
         
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-lg">
