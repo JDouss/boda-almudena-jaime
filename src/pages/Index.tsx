@@ -13,6 +13,7 @@ const Index = () => {
       <Venue />
       <RSVP />
       <Footer />
+      <Gifts /> {/* Add the Gifts component here */}
     </div>
   );
 };
