@@ -34,7 +34,7 @@ const Venue = () => {
               <div className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sage-700 font-medium">Ceremony</p>
+                  <p className="text-sage-700 font-medium">Ceremonia</p>
                   <p className="text-sage-600">12:30</p>
                 </div>
               </div>
@@ -42,7 +42,7 @@ const Venue = () => {
               <div className="flex items-start gap-3">
                 <Bus className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sage-600">Habrá autobuses disponibles para ir a la finca al finalizar la ceremonia </p>
+                  <p className="text-sage-600">Habrá autobuses para ir a la finca al finalizar la ceremonia </p>
                 </div>
               </div>
             </div>
