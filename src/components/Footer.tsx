@@ -11,8 +11,6 @@ const Footer = () => {
             18 Octubre, 2025 • Madrid, España
           </p>
           <div className="flex items-center justify-center gap-2 text-terracotta-300">
-            <Heart className="w-5 h-5 fill-current" />
-            <Heart className="w-5 h-5 fill-current" />
           </div>
         </div>
         
