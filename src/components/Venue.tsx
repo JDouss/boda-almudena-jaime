@@ -1,7 +1,6 @@
 import { MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import TenadasImage from '@/assets/LasTenadas.png';
-import IglesiaICADEImage from '@/assets/IglesiaICADE.jpeg';
 
 const Venue = () => {
   return (
@@ -17,8 +16,8 @@ const Venue = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="animate-scale-in">
               <img 
-                src={IglesiaICADEImage} // <-- 2. Use the imported image variable
-                alt="Iglesia de la Inmaculada y San Pedro Claver"
+                src={TenadasImage} // <-- 2. Use the imported image variable
+                alt="Finca Las Tenadas"
                 className="rounded-lg shadow-2xl w-full h-96 object-cover"
               />
             </div>
