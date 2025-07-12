@@ -1,9 +1,9 @@
 
 import Hero from '@/components/Hero';
-import AboutCouple from '@/components/AboutCouple';
 import Venue from '@/components/Venue';
 import RSVP from '@/components/RSVP';
 import PhotoGallery from '@/components/PhotoGallery';
+import Gifts from '@/components/Gifts'; // Import the new Gifts component
 import Footer from '@/components/Footer';
 
 const Index = () => {
