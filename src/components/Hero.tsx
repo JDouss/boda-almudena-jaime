@@ -1,14 +1,17 @@
 
 import { Calendar, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import AlmuyJaimeDanubio from '@/assets/AlmuyJaimeDanubio.jpeg';
+import AlmuyJaimeDanubio from '@/assets/AlmuyJaimeDanubio.png'
+import fotoPedida from '@/assets/fotoPedida.jpg'
+
+
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <img
-        src={AlmuyJaimeDanubio} // Changed to use your imported image
+        src={fotoPedida} // Changed to use your imported image
         alt="Almudena y Jaime" // More descriptive alt text for accessibility
         className="absolute inset-0 w-full h-full object-cover object-position-center" // Added object-position-center
         style={{ zIndex: -1 }} // Places image behind other content
@@ -34,12 +37,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <Button 
-          size="lg" 
-          className="bg-terracotta-500 hover:bg-terracotta-600 text-white border-none font-medium px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105"
-        >
-          RSVP Now
-        </Button>
+
       </div>
       
       {/* Decorative Elements */}
