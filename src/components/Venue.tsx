@@ -38,6 +38,13 @@ const Venue = () => {
                   <p className="text-sage-600">12:30</p>
                 </div>
               </div>
+              {/* Bus info for Iglesia */}
+              <div className="flex items-start gap-3">
+                <Bus className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-sage-600">Habrá autobuses disponibles para ir a la finca</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -74,6 +81,13 @@ const Venue = () => {
                 <div>
                   <p className="text-sage-700 font-medium">Cocktail</p>
                   <p className="text-sage-600">15:00</p>
+                </div>
+              </div>
+              {/* Bus info for Las Tenadas */}
+              <div className="flex items-start gap-3">
+                <Bus className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-sage-600">Los autobuses volverán a la zona de Bernabeu, concretaremos hora y sitio exacto a medida que se acerque ala fecha</p>
                 </div>
               </div>
             </div>
