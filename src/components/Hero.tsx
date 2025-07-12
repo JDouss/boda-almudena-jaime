@@ -1,7 +1,6 @@
 
 import { Calendar, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import AlmuyJaimeDanubio from '@/assets/AlmuyJaimeDanubio.png'
 import fotoPedida from '@/assets/fotoPedida.jpg'
 
 
