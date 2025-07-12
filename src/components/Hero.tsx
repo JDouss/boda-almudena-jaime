@@ -12,7 +12,7 @@ const Hero = () => {
       <img
         src={fotoPedida} // Changed to use your imported image
         alt="Almudena y Jaime" // More descriptive alt text for accessibility
-        className="absolute inset-0 w-full h-full object-cover object-position-center" // Added object-position-center
+        className="absolute inset-0 w-full h-full object-cover object-position-bottom"
         style={{ zIndex: -1 }} // Places image behind other content
       />
       
