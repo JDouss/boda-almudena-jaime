@@ -1,6 +1,5 @@
 import { MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import TenadasImage from '@/assets/LasTenadas.png';
 
 const Venue = () => {
   return (
@@ -16,8 +15,9 @@ const Venue = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="animate-scale-in">
               <img 
-                src={TenadasImage} // <-- 2. Use the imported image variable
-                alt="Finca Las Tenadas"
+                // URL de imagen corregida para que funcione
+                src="https://images.unsplash.com/photo-1597092923258-94ff65a4a5f4?q=80&w=1935&auto=format&fit=crop"
+                alt="Iglesia de la Inmaculada y San Pedro Claver"
                 className="rounded-lg shadow-2xl w-full h-96 object-cover"
               />
             </div>
@@ -46,7 +46,8 @@ const Venue = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="animate-scale-in">
               <img 
-                src={TenadasImage} // <-- 2. Use the imported image variable
+                // URL de imagen corregida para que funcione
+                src="https://images.unsplash.com/photo-1522026852934-28a4a35a7a11?q=80&w=1964&auto=format&fit=crop"
                 alt="Finca Las Tenadas"
                 className="rounded-lg shadow-2xl w-full h-96 object-cover"
               />
