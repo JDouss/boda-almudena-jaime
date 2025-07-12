@@ -1,5 +1,5 @@
 import { MapPin } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+// Removed Card and CardContent imports as they are no longer needed
 import TenadasImage from '@/assets/LasTenadas.png';
 import IglesiaICADEImage from '@/assets/IglesiaICADE.png';
 
@@ -31,6 +31,7 @@ const Venue = () => {
                   <p className="text-sage-600">28015 Madrid, España</p>
                 </div>
               </div>
+              <p className="text-sage-600 text-lg font-medium">Ceremonia: 12:30</p> {/* Added ceremony time */}
             </div>
           </div>
         </div>
@@ -63,24 +64,7 @@ const Venue = () => {
               </div>
             </div>
           </div>
-          {/* Modified this div to use flexbox for centering */}
-          <div className="flex flex-wrap justify-center gap-8">
-            <Card className="border-terracotta-200 animate-scale-in">
-              <CardContent className="p-6 text-center">
-                <h4 className="font-serif text-xl text-sage-800 mb-3">Ceremonia</h4>
-                <p className="text-sage-600 mb-2">Iglesia</p>
-                <p className="text-sage-500 text-sm">12:30</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-terracotta-200 animate-scale-in">
-              <CardContent className="p-6 text-center">
-                <h4 className="font-serif text-xl text-sage-800 mb-3">Cocktail</h4>
-                <p className="text-sage-600 mb-2">Las Tenadas</p>
-                <p className="text-sage-500 text-sm">15:00</p>
-              </CardContent>
-            </Card>
-          </div>
+          {/* Removed the redundant cards div */}
         </div>
       </section>
     </>
