@@ -22,10 +22,6 @@ const Hero = () => {
           Almudena <span className="text-cream-200">y</span> Jaime
         </h1>
         
-        <p className="text-xl md:text-2xl mb-8 font-light tracking-wider">
-          se casan
-        </p>
-        
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-lg">
           <div className="flex items-center gap-2">
             <Calendar className="w-5 h-5 text-cream-200" />
