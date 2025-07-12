@@ -75,14 +75,6 @@ const Venue = () => {
                   <p className="text-sage-600">28770 Colmenar Viejo, Madrid</p>
                 </div>
               </div>
-              {/* Cocktail Time */}
-              <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-sage-700 font-medium">Cocktail</p>
-                  <p className="text-sage-600">15:00</p>
-                </div>
-              </div>
               {/* Bus info for Las Tenadas */}
               <div className="flex items-start gap-3">
                 <Bus className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
