@@ -12,8 +12,8 @@ const Index = () => {
       <Hero />
       <Venue />
       <RSVP />
+      <Gifts /> 
       <Footer />
-      <Gifts /> {/* Add the Gifts component here */}
     </div>
   );
 };
