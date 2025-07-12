@@ -1,11 +1,11 @@
+// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/boda-almudena-jaime/", // <-- REEMPLAZA ESTO
+  base: "/", // CHANGE THIS LINE to a single slash for root domain
   server: {
     host: "::",
     port: 8080,
