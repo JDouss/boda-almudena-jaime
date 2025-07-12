@@ -1,29 +1,50 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from '@/hooks/use-toast';
 
 const RSVP = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     guests: '1',
     attendance: '',
     dietary: ''
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "RSVP Submitted!",
-      description: "Thank you for your response. We can't wait to celebrate with you!",
-    });
-    setFormData({ name: '', email: '', guests: '1', attendance: '', dietary: '' });
+
+    const formUrl = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfx-3R1YA_-Rlpefs9udCPYonnJRqk-bm6jhw8P07uSyQjp1Q/formResponse';
+
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append('entry.1424661284', formData.name);
+    formDataToSubmit.append('entry.1498135098', formData.guests);
+    formDataToSubmit.append('entry.877086558', formData.attendance);
+    formDataToSubmit.append('entry.2606285', formData.dietary);
+
+    try {
+      await fetch(formUrl, {
+        method: 'POST',
+        body: formDataToSubmit,
+        mode: 'no-cors'
+      });
+
+      toast({
+        title: "RSVP Submitted!",
+        description: "Thank you for your response. We can't wait to celebrate with you!",
+      });
+      setFormData({ name: '', guests: '1', attendance: '', dietary: '' });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem submitting your RSVP. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -47,7 +68,7 @@ const RSVP = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="name" className="text-sage-700 font-medium">Full Name</Label>
+                  <Label htmlFor="name" className="text-sage-700 font-medium">Nombre(s)</Label>
                   <Input
                     id="name"
                     value={formData.name}
@@ -57,56 +78,57 @@ const RSVP = () => {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email" className="text-sage-700 font-medium">Email Address</Label>
+                  <Label htmlFor="guests" className="text-sage-700 font-medium">¿Cuántos seréis?</Label>
                   <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    id="guests"
+                    type="number"
+                    value={formData.guests}
+                    onChange={(e) => setFormData({...formData, guests: e.target.value})}
                     required
+                    min="1"
                     className="border-sage-300 focus:border-terracotta-400"
                   />
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Label className="text-sage-700 font-medium">Number of Guests</Label>
-                  <Select value={formData.guests} onValueChange={(value) => setFormData({...formData, guests: value})}>
-                    <SelectTrigger className="border-sage-300 focus:border-terracotta-400">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="1">1 Guest</SelectItem>
-                      <SelectItem value="2">2 Guests</SelectItem>
-                      <SelectItem value="3">3 Guests</SelectItem>
-                      <SelectItem value="4">4 Guests</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <Label className="text-sage-700 font-medium">Will you attend?</Label>
-                  <Select value={formData.attendance} onValueChange={(value) => setFormData({...formData, attendance: value})}>
-                    <SelectTrigger className="border-sage-300 focus:border-terracotta-400">
-                      <SelectValue placeholder="Please select" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="yes">Yes, I'll be there!</SelectItem>
-                      <SelectItem value="no">Sorry, can't make it</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+              <div>
+                <Label className="text-sage-700 font-medium">¿Puedes asistir?</Label>
+                <RadioGroup
+                  value={formData.attendance}
+                  onValueChange={(value) => setFormData({...formData, attendance: value})}
+                  className="mt-2"
+                >
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="Sí, allí estaré" id="yes" />
+                    <Label htmlFor="yes">Sí, allí estaré</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="No puedo, lo siento" id="no" />
+                    <Label htmlFor="no">No puedo, lo siento</Label>
+                  </div>
+                </RadioGroup>
               </div>
               
               <div>
-                <Label htmlFor="dietary" className="text-sage-700 font-medium">Dietary Restrictions</Label>
-                <Input
-                  id="dietary"
+                <Label className="text-sage-700 font-medium">Restricciones alimenticias</Label>
+                <RadioGroup
                   value={formData.dietary}
-                  onChange={(e) => setFormData({...formData, dietary: e.target.value})}
-                  placeholder="Any allergies or special dietary needs?"
-                  className="border-sage-300 focus:border-terracotta-400"
-                />
+                  onValueChange={(value) => setFormData({...formData, dietary: value})}
+                  className="mt-2"
+                >
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="Ninguna" id="none" />
+                    <Label htmlFor="none">Ninguna</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="Vegano" id="vegan" />
+                    <Label htmlFor="vegan">Vegano</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="Celiaco" id="celiac" />
+                    <Label htmlFor="celiac">Celiaco</Label>
+                  </div>
+                </RadioGroup>
               </div>
               
               <Button 

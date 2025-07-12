@@ -1,17 +1,19 @@
 
 import { Calendar, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import AlmuyJaimeDanubio from '@/assets/AlmuyJaimeDanubio.jpeg';
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://raw.githubusercontent.com/JDouss/boda-almudena-jaime/main/src/assets/AlmuyJaimeDanubio.jpeg')`
-        }}
+      <img
+        src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2000&q=80"
+        alt="Scenic background"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ zIndex: -1 }}
       />
+      <div className="absolute inset-0 bg-black/30" />
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto animate-fade-in">
