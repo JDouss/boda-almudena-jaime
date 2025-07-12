@@ -1,11 +1,10 @@
 import { MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import TenadasImage from '@/assets/LasTenadas.png';
-import IglesiaImage from '@/assets/IglesiaICADE.png';
+import IglesiaICADEImage from '@/assets/IglesiaICADE.jpeg';
 
 const Venue = () => {
   return (
-    // Se ha añadido un contenedor <> ... </> para agrupar todo
     <>
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -17,7 +16,7 @@ const Venue = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="animate-scale-in">
               <img 
-                src={IglesiaImage} // <-- 2. Use the imported image variable
+                src={IglesiaICADEImage}
                 alt="Iglesia de la Inmaculada y San Pedro Claver"
                 className="rounded-lg shadow-2xl w-full h-96 object-cover"
               />
@@ -47,7 +46,7 @@ const Venue = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="animate-scale-in">
               <img 
-                src={TenadasImage} // <-- 2. Use the imported image variable
+                src={TenadasImage}
                 alt="Finca Las Tenadas"
                 className="rounded-lg shadow-2xl w-full h-96 object-cover"
               />
@@ -64,7 +63,8 @@ const Venue = () => {
               </div>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Modified this div to use flexbox for centering */}
+          <div className="flex flex-wrap justify-center gap-8">
             <Card className="border-terracotta-200 animate-scale-in">
               <CardContent className="p-6 text-center">
                 <h4 className="font-serif text-xl text-sage-800 mb-3">Ceremonia</h4>
