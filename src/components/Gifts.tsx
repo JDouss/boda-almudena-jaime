@@ -12,7 +12,7 @@ const Gifts = () => {
             Lo más importante para nosotros es compartir este día tan especial con vosotros. Si aun así queréis tener un detalle con nosotros, os dejamos nuestro número de cuenta:
           </p>
           {/* IMPORTANT: Replace [YOUR ACCOUNT NUMBER HERE] with your actual account number */}
-          <p className="text-sage-700 text-2xl md:text-3xl font-semibold mt-8">
+          <p className="text-sage-700 text-xl md:text-3xl font-semibold mt-8">
             ES7300496101132916153383
           </p>
         </div>
