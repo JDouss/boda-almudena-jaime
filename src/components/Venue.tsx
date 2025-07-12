@@ -1,4 +1,4 @@
-import { MapPin, Clock } from 'lucide-react'; // Added Clock icon
+import { MapPin, Clock, Bus } from 'lucide-react'; // Added Bus icon
 import TenadasImage from '@/assets/LasTenadas.png';
 import IglesiaICADEImage from '@/assets/IglesiaICADE.png';
 
@@ -30,11 +30,11 @@ const Venue = () => {
                   <p className="text-sage-600">28015 Madrid, España</p>
                 </div>
               </div>
-              {/* Ceremony Time (formatted like direction) */}
+              {/* Ceremony Time */}
               <div className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sage-700 font-medium">Ceremonia</p>
+                  <p className="text-sage-700 font-medium">Ceremony</p>
                   <p className="text-sage-600">12:30</p>
                 </div>
               </div>
@@ -75,7 +75,7 @@ const Venue = () => {
                   <p className="text-sage-600">28770 Colmenar Viejo, Madrid</p>
                 </div>
               </div>
-              {/* Cocktail Time (formatted like direction) */}
+              {/* Cocktail Time */}
               <div className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
                 <div>
