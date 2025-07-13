@@ -14,7 +14,7 @@ const RSVP = () => {
           <h2 className="font-serif text-4xl md:text-5xl text-sage-800 mb-6">RSVP</h2>
           <div className="w-24 h-1 bg-terracotta-400 mx-auto mb-8"></div>
           <p className="text-sage-600 text-xl">
-            ¡Por favor, responde el formulario para ayudarnos a planear!
+            ¡Por favor, responde el formulario para ayudarnos a organizar!
           </p>
         </div>
 
