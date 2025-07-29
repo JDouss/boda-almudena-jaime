@@ -79,7 +79,7 @@ const Venue = () => {
               <div className="flex items-start gap-3">
                 <Bus className="w-5 h-5 text-terracotta-500 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sage-600">Los autobuses volverán a la zona de Bernabeu, concretaremos hora y sitio exacto a medida que se acerque la fecha</p>
+                  <p className="text-sage-600">Los autobuses volverán a la zona de Bernabéu, concretaremos hora y sitio exacto a medida que se acerque la fecha</p>
                 </div>
               </div>
             </div>
